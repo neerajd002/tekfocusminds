@@ -510,7 +510,7 @@ textarea.input {
 }
 .navbar-brand .navbar-item img {
   /* max-height: unset; */
-  max-height: 2rem;
+  max-height: 2.5rem;
 }
 
 .navbar-burger {
@@ -540,7 +540,9 @@ textarea.input {
 }
 
 #navbar {
-  position: absolute;
+  /* position: absolute; */
+  position: sticky;
+  background-color: white;
   top: 0;
   left: 0;
   width: 100%;
