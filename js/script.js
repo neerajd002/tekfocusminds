@@ -149,4 +149,18 @@
     delay: 10,
     time: 1000,
   });
+
+  $( window ).on( "scroll", function() {
+    if($(this).scrollTop() > 200) {
+      // $('.navbar-end').css('opacity', '0');
+      $('.navbar-end').hide();
+      $('.logo-normal img').attr('src', 'images/logo-t.png');
+      $('.navbar').addClass('small');
+    } else {
+      // $('.navbar-end').css('opacity', '1');
+      $('.navbar-end').show();
+      $('.logo-normal img').attr('src', 'images/Logo_RGB_2.png');
+      $('.navbar').removeClass('small');
+    }
+  } );
 })(jQuery);

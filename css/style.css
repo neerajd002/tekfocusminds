@@ -8,14 +8,16 @@ body {
   line-height: 1.6;
   font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 14px;
   color: #6F8BA4;
   font-weight: 400;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
+  /* font-weight: 900; */
+  font-weight: 400;
   color: #111;
 }
 
@@ -42,7 +44,8 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 0.9rem;
 }
 
 p {
@@ -79,10 +82,12 @@ input[type=tel] {
 .btn {
   display: inline-block;
   font-size: 14px;
-  font-size: 0.8125rem;
+  /* font-size: 0.8125rem; */
+  font-size: 0.7125rem;
   font-weight: 500;
   letter-spacing: 0.5px;
-  padding: 0.7rem 2rem;
+  /* padding: 0.7rem 2rem; */
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   border-radius: 5px;
   border: 2px solid transparent;
@@ -201,7 +206,8 @@ input[type=tel] {
 }
 
 .section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 70px 0;
 }
 
 .section-sm {
@@ -512,6 +518,14 @@ textarea.input {
   /* max-height: unset; */
   max-height: 2.5rem;
 }
+.navbar.small .navbar-item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar.small .navbar-brand .navbar-item img {
+  max-height: 1.75rem;
+}
 
 .navbar-burger {
   height: 3rem;
@@ -555,9 +569,14 @@ textarea.input {
   color: #111;
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 14px;
   padding: 8px !important;
   transition: all 0.25s ease;
+}
+#navbar .navbar-link.selected {
+  color: #009EB7 !important;
+  background-color: transparent !important;
 }
 #navbar .navbar-link:hover {
   color: #009EB7 !important;
@@ -653,7 +672,7 @@ ul.dropdown-menu li {
   background: #fff;
   background: url("../images/bg/main-banner1.jpg") no-repeat 80% 50%;
   background-size: cover;
-  padding: 120px 0px;
+  padding: 0 0 120px 0px;
 }
 @media (max-width: 575px) {
   .banner {
@@ -669,7 +688,8 @@ ul.dropdown-menu li {
   }
 }
 .banner .block h1 {
-  font-size: 75px;
+  /* font-size: 75px; */
+  font-size: 45px;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -1.2px;
@@ -1683,7 +1703,8 @@ ul.dropdown-menu li {
 }
 
 .footer {
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+  padding: 50px 0 0px 0;
   background: #000;
 }
 .footer .copyright a {
