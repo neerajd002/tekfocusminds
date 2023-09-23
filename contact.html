@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="plugins/bulma/bulma.min.css">
     <!-- Icon Font Css -->
     <link rel="stylesheet" href="plugins/themify/css/themify-icons.css">
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+    <!-- <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css"> -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
         <link rel="stylesheet" href="plugins/modal-video/modal-video.css">
         <link rel="stylesheet" href="plugins/animate-css/animate.css">
@@ -57,10 +58,13 @@
 						<a class="navbar-link" href="about.html">About</a>
 					</li>
 
-					<li class="navbar-item">
-						<!-- <a class="navbar-link" href="project.html">Portfolio</a> -->
-                        <a class="navbar-link" href="service.html">Service</a>
-					</li>
+					<li class="navbar-item has-dropdown">
+                        <a class="navbar-link">Services</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="hr-services.html">HR Services</a>
+                            <a class="navbar-item" href="it-solutions.html">IT Solutions</a>
+                        </div>
+                    </li>
 
                     <li class="navbar-item">
                         <a class="navbar-link" href="careers.html">Careers</a>
@@ -129,7 +133,7 @@
                                 Your message was sent successfully.
                             </div>
 
-                            <select class="input" id="exampleFormControlSelect1">
+                            <!-- <select class="input" id="exampleFormControlSelect1">
                                 <option>I Need help in ...</option>
                                 <option>Software Design</option>
                                 <option>Development cycle</option>
@@ -138,6 +142,13 @@
                                 <option>Process Query</option>
                                 <option>Cost and Duration</option>
                                 <option>Modal Delivery</option>
+                            </select> -->
+                            <select class="input" id="exampleFormControlSelect1">
+                                <option>IT Outsourcing</option>
+                                <option>Staff Agumentation on demand</option>
+                                <option>Project Management</option>
+                                <option>Support & Maintenance</option>
+                                <option>Transition Management</option>
                             </select>
                         </div>
                         <div class="column is-12">
@@ -171,8 +182,12 @@
                             info@tekfocusminds.com
                         </li>
                         <li>
-                            <h5>Location Map</h5>
-                            Naidu layout, Shanthipura, Electronic city ph 2, Bengaluru, Karnataka 560099, IN
+                            <h5>Headquarter Office</h5>
+                            Tekfocus Minds LLC, 2471 North Naglee Road, Tracy, CA 95304
+                        </li>
+                        <li>
+                            <h5>Global Delivery Center</h5>
+                            Tekfocus Minds Pvt Ltd. Electronic City, Bengaluru, Karnataka, IN
                         </li>
                     </ul>
 
@@ -181,10 +196,10 @@
                             <a href="http://www.tekfocusminds.com"><i class="fab fa-facebook-f"></i></a>
                         </li> -->
                         <li class="list-inline-item">
-                            <a href="https://twitter.com/TekfocusMinds" aria-label="Twitter Link"><i class="fab fa-twitter"></i></a>
+                            <a href="https://twitter.com/TekfocusMinds" target="_blank" aria-label="Twitter Link"><i class="fab fa-x-twitter"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://in.linkedin.com/company/tekfocus-minds" aria-label="LinkedIn Link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://in.linkedin.com/company/tekfocus-minds" target="_blank" aria-label="LinkedIn Link"><i class="fab fa-linkedin-in"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -272,10 +287,10 @@
 					<h4 class="is-capitalize mb-4">Company</h4>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="service.html">Services</a></li>
+						<li><a href="about.html#Team">Team</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -299,8 +314,8 @@
 
 					<ul class="list-inline footer-socials mt-5">
 						<!-- <li class="list-inline-item"><a href="https://www.facebook.com/tekfocusminds" aria-label="Facebook Link"><i class="ti-facebook mr-2"></i></a></li> -->
+						<li class="list-inline-item"><a href="https://twitter.com/TekfocusMinds" aria-label="Twitter Link"><i class="fab fa-x-twitter mr-2"></i></a></li>
 						<li class="list-inline-item"><a href="https://in.linkedin.com/company/tekfocus-minds" aria-label="LinkedIn Link"><i class="ti-linkedin mr-2"></i></a></li>
-						<li class="list-inline-item"><a href="https://twitter.com/TekfocusMinds" aria-label="Twitter Link"><i class="ti-twitter mr-2"></i></a></li>
 						<!-- <li class="list-inline-item"><a href="https://www.pinterest.com/tekfocusminds/" aria-label="Pinterest Link"><i class="ti-linkedin mr-2 "></i></a></li> -->
 					</ul>
 				</div>
