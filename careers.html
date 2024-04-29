@@ -127,7 +127,7 @@
 			</div>
 		</div>
 
-		<div class="columns is-desktop is-justify-content-center">
+		<div class="columns is-desktop is-justify-content-center job-listings">
 			<div class="column is-10-desktop">
 				<div class="heading has-text-centered mb-0">
 					<h2><span class="text-color">Current Openings -</span></h2>
@@ -135,7 +135,7 @@
 			</div>
 		</div>
 
-		<div class="columns is-desktop is-justify-content-center">
+		<div class="columns is-desktop is-justify-content-center job-listings">
 			<div class="column is-10-desktop" id="jobListings">
 				<div class="heading">
 					<h3 class="text-color has-text-left">Java</h3>
@@ -499,6 +499,9 @@
 				</div>`
 		}
 		var converter = new showdown.Converter();
+		if(!jobs.length) {
+			document.querySelectorAll('.job-listings').forEach(element => element.style.display = 'none');
+		}
 		document.querySelector("#jobListings").innerHTML = jobs.map(jobDetails).join('');
 	</script>
 	<style>
