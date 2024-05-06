@@ -477,17 +477,28 @@
     
     <script src="js/script.js"></script>
 	<script src="js/data.js"></script>
+	<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 	<script>
 		const jobDetails = data => {
-			const { title, description, experience, location, country, download } = data;
-			return `<div class="py-3" style="margin-top: -1px; border-top: 1px solid;border-bottom: 1px solid;">
-					<h6 class="has-text-left uppercase">${country} | ${location}</h6>
-					<h3 class="text-color has-text-left">${title}</h3>
-					<p style="text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;">${description}</p>
-					<p class="is-inline-block" style="width:49%;"><b>Experience -</b> ${experience}</p>
-					<p class="is-inline-block has-text-right" style="width:49%;"><a href="${download}" target="_blank">Get more details...</a></p>
+			const { role, description, experience, relevant_experience, budget, location, no_of_openings, notice_period } = data;
+			showdown.setOption('smartIndentationFix', true);
+			showdown.setOption('disableForced4SpacesIndentedSublists', true);
+			var converter = new showdown.Converter();
+			console.log(converter.makeHtml(description));
+			return `<div class="heading">
+					<h3 class="text-color has-text-left">${role}</h3>
+					<ul class="has-text-left">
+						${description ? `<li class="mt-5 enable-bullets"><strong>Description -</strong><p>${converter.makeHtml(description)}</p></li>` : ''}
+						${experience ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>Experience -</strong> ${experience}</li>` : ''}
+						${relevant_experience ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>Relevant Exp. -</strong> ${relevant_experience}</li>` : ''}
+						${budget ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>Budget -</strong> ${budget}</li>` : ''}
+						${notice_period ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>Notice period -</strong> ${notice_period}</li>` : ''}
+						${location ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>Location -</strong> ${location}</li>` : ''}
+						${no_of_openings ? `<li class="mt-5 is-inline-block" style="width:49%;"><strong>No. of Openings -</strong> ${no_of_openings}</li>` : ''}
+					</ul>
 				</div>`
 		}
+		var converter = new showdown.Converter();
 		if(!jobs.length) {
 			document.querySelectorAll('.job-listings').forEach(element => element.style.display = 'none');
 		}
